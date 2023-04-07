@@ -37,17 +37,10 @@ const watcher = new RealDebridWatcher(REAL_DEBRID_API_KEY, downloader.download)
 // Watch for new torrent files
 console.log(`[+] Watching '${WATCH_DIR}' for new torrents`)
 
-chokidar
-  .watch([
-    `${WATCH_DIR}/*.magnet`,
-    `${WATCH_DIR}/*.torrent`
-  ], {
-    awaitWriteFinish: true,
-    ignored: '/(^|[/\\])../'
-  })
-  .on('add', path => {
-    watcher.addFile(path)
-  })
+chokidar.watch(`${WATCH_DIR}/*.torrent`)
+  .on('add', path => watcher.addTorrent(path))
 
+chokidar.watch(`${WATCH_DIR}/*.magnet`)
+    .on('add', path => watcher.addMagnet(path))
 // Check the torrent watch list every "WATCH_RATE" ms
 setInterval(() => watcher.checkWatchList(), WATCH_RATE)
