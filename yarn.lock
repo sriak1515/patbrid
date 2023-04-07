@@ -245,10 +245,9 @@ readdirp@~3.6.0:
   dependencies:
     picomatch "^2.2.1"
 
-real-debrid-api@^1.0.1:
+"real-debrid-api@https://github.com/Wamy-Dev/node-real-debrid#patch-1":
   version "1.1.0"
-  resolved "https://registry.yarnpkg.com/real-debrid-api/-/real-debrid-api-1.1.0.tgz#d187c1ffc99a4d0aebd60c8a4da3c6785eb8a591"
-  integrity sha512-x9qUHNl/ad19rM1Sd76aCW7Vk80vxPzqhqsY8mJbTGWKw4F70IeOPMqfC2p8GJGiJuI+ff9e01ysV9+uWDBQ2g==
+  resolved "https://github.com/Wamy-Dev/node-real-debrid#9b3371b36afdc2b4736356ee54099cd21470864e"
   dependencies:
     axios "^0.27.2"
 
