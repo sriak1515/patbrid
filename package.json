@@ -8,7 +8,7 @@
     "chokidar": "^3.3.0",
     "debug": "^4.1.1",
     "node-json-rpc": "^0.0.1",
-    "real-debrid-api": "https://github.com/Wamy-Dev/node-real-debrid#patch-1"
+    "real-debrid-api": "https://github.com/sriak1515/node-real-debrid"
   },
   "devDependencies": {
     "nodemon": "^2.0.1"
